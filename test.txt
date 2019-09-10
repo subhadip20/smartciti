@@ -1,0 +1,55 @@
+////scroll event
+
+
+var targetOffset = $(".cart-mob").offset().top;
+
+var winheight=jQuery(window).height();
+winheight=winheight-50;
+ $(window).scroll(function(){
+ //alert("hit");
+ console.log($(window).scrollTop()+":::"+targetOffset)
+if ( $(window).scrollTop()+winheight > targetOffset ) { 
+
+      $(".cart-mob").css('position','relative');
+    } 
+else{
+ $(".cart-mob").css('position','fixed');
+}
+    });
+	
+	///design change
+	
+	sup{
+    background-color: red;
+    padding: 4px;
+    position: relative;
+    top: -16px;
+    left: -3px;
+    border-radius: 50%;
+    color: white;
+	}
+	
+	
+	@media (max-width: 540px)
+.nav-right {
+    position: absolute;
+    top: 67px;
+    left: 0px;
+    float: left;
+}
+
+.search-inside .search-close {
+    position: absolute;
+    right: 24px;
+    top: 50px;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 500;
+}
+
+
+@media (max-width: 440px){
+.flex-direction-nav{
+display:none;
+}
+}
